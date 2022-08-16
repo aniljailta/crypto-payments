@@ -1,0 +1,628 @@
+[
+  {
+    "type": "multi-input",
+    "id": "addresses",
+    "title": "Cryptocurrency addresses",
+    "content": "Enter the cryptocurrency addresses that will receive payments.",
+    "value": [
+      {
+        "type": "text",
+        "id": "address-btc",
+        "title": "Bitcoin"
+      },
+      {
+        "type": "text",
+        "id": "address-eth",
+        "title": "Ethereum"
+      },
+      {
+        "type": "text",
+        "id": "address-doge",
+        "title": "Dogecoin"
+      },
+      {
+        "type": "text",
+        "id": "address-algo",
+        "title": "Algorand"
+      },
+      {
+        "type": "text",
+        "id": "address-usdt",
+        "title": "Tether"
+      },
+      {
+        "type": "text",
+        "id": "address-usdc",
+        "title": "USD Coin"
+      },
+      {
+        "type": "text",
+        "id": "address-link",
+        "title": "Chainlink"
+      },
+      {
+        "type": "text",
+        "id": "address-shib",
+        "title": "Shiba Inu"
+      },
+      {
+        "type": "text",
+        "id": "address-bat",
+        "title": "Basic Attention Token"
+      }
+    ]
+  },
+  {
+    "type": "number",
+    "id": "refresh-interval",
+    "title": "Exchange rates refresh interval",
+    "content": "Set the refresh interval for exchange rates in minutes. Default is 60 minutes."
+  },
+  {
+    "type": "number",
+    "id": "confirmations",
+    "title": "Confirmations number",
+    "content": "Set the minimum number of confirmations to validate a payment. Default is 3."
+  },
+  {
+    "type": "select",
+    "id": "currency",
+    "title": "Currency",
+    "content": "Set the default checkout currency. Default is USD.",
+    "value": [
+      [ "", "" ],
+      [ "AED", "Afghan Afghani" ],
+      [ "ALL", "Albanian Lek" ],
+      [ "AMD", "Algerian Dinar" ],
+      [ "EGP", "Angolan Kwanza" ],
+      [ "ARS", "Argentine Peso" ],
+      [ "AUD", "Armenian Dram" ],
+      [ "ANG", "Aruban Florin" ],
+      [ "AZN", "Australian Dollar" ],
+      [ "AWG", "Azerbaijani Manat" ],
+      [ "BAM", "Bahamian Dollar" ],
+      [ "BTC", "Bahraini Dinar" ],
+      [ "BIF", "Bangladeshi Taka" ],
+      [ "BGN", "Barbadian Dollar" ],
+      [ "BDT", "Belarusian Ruble" ],
+      [ "BZD", "Belize Dollar" ],
+      [ "CAD", "Bermudan Dollar" ],
+      [ "BND", "Bhutanese Ngultrum" ],
+      [ "BWP", "Bitcoin" ],
+      [ "BTN", "Bolivian Boliviano" ],
+      [ "BRL", "Bosnia-Herzegovina Convertible Mark" ],
+      [ "BBD", "Botswanan Pula" ],
+      [ "BYN", "Brazilian Real" ],
+      [ "BSD", "British Pound Sterling" ],
+      [ "GEL", "Brunei Dollar" ],
+      [ "BOB", "Bulgarian Lev" ],
+      [ "BHD", "Burundian Franc" ],
+      [ "BMD", "CFA Franc BCEAO" ],
+      [ "XPD", "CFA Franc BEAC" ],
+      [ "XAG", "CFP Franc" ],
+      [ "XPT", "Cambodian Riel" ],
+      [ "KMF", "Canadian Dollar" ],
+      [ "CDF", "Cape Verdean Escudo" ],
+      [ "CZK", "Cayman Islands Dollar" ],
+      [ "KZT", "Chilean Peso" ],
+      [ "CNH", "Chilean Unit of Account (UF)" ],
+      [ "CLP", "Chinese Yuan (Offshore)" ],
+      [ "CNY", "Chinese Yuan" ],
+      [ "COP", "Colombian Peso" ],
+      [ "CRC", "Comorian Franc" ],
+      [ "KPW", "Congolese Franc" ],
+      [ "CHF", "Costa Rican Colón" ],
+      [ "CUC", "Croatian Kuna" ],
+      [ "HTG", "Cuban Convertible Peso" ],
+      [ "CUP", "Cuban Peso" ],
+      [ "CVE", "Czech Republic Koruna" ],
+      [ "DJF", "Danish Krone" ],
+      [ "DOP", "Djiboutian Franc" ],
+      [ "DKK", "Dominican Peso" ],
+      [ "DZD", "East Caribbean Dollar" ],
+      [ "XDR", "Egyptian Pound" ],
+      [ "ERN", "Eritrean Nakfa" ],
+      [ "ETB", "Ethiopian Birr" ],
+      [ "EUR", "Euro" ],
+      [ "FJD", "Falkland Islands Pound" ],
+      [ "GBP", "Fijian Dollar" ],
+      [ "FKP", "Gambian Dalasi" ],
+      [ "GNF", "Georgian Lari" ],
+      [ "GGP", "Ghanaian Cedi" ],
+      [ "GIP", "Gibraltar Pound" ],
+      [ "GMD", "Gold Ounce" ],
+      [ "XCD", "Guatemalan Quetzal" ],
+      [ "GYD", "Guernsey Pound" ],
+      [ "GHS", "Guinean Franc" ],
+      [ "GTQ", "Guyanaese Dollar" ],
+      [ "HKD", "Haitian Gourde" ],
+      [ "HUF", "Honduran Lempira" ],
+      [ "HRK", "Hong Kong Dollar" ],
+      [ "HNL", "Hungarian Forint" ],
+      [ "IDR", "Icelandic Króna" ],
+      [ "JEP", "Indian Rupee" ],
+      [ "IQD", "Indonesian Rupiah" ],
+      [ "ILS", "Iranian Rial" ],
+      [ "ISK", "Iraqi Dinar" ],
+      [ "IRR", "Israeli New Sheqel" ],
+      [ "IMP", "Jamaican Dollar" ],
+      [ "JOD", "Japanese Yen" ],
+      [ "KES", "Jersey Pound" ],
+      [ "JMD", "Jordanian Dinar" ],
+      [ "JPY", "Kazakhstani Tenge" ],
+      [ "LAK", "Kenyan Shilling" ],
+      [ "KGS", "Kuwaiti Dinar" ],
+      [ "KYD", "Kyrgystani Som" ],
+      [ "KHR", "Laotian Kip" ],
+      [ "LBP", "Lebanese Pound" ],
+      [ "LKR", "Lesotho Loti" ],
+      [ "LYD", "Liberian Dollar" ],
+      [ "LSL", "Libyan Dinar" ],
+      [ "MAD", "Macanese Pataca" ],
+      [ "MRU", "Macedonian Denar" ],
+      [ "MMK", "Malagasy Ariary" ],
+      [ "MKD", "Malawian Kwacha" ],
+      [ "MXN", "Malaysian Ringgit" ],
+      [ "MZN", "Maldivian Rufiyaa" ],
+      [ "MWK", "Manx pound" ],
+      [ "INR", "Mauritanian Ouguiya" ],
+      [ "MUR", "Mauritian Rupee" ],
+      [ "MVR", "Mexican Peso" ],
+      [ "MYR", "Moldovan Leu" ],
+      [ "MGA", "Mongolian Tugrik" ],
+      [ "MOP", "Moroccan Dirham" ],
+      [ "MDL", "Mozambican Metical" ],
+      [ "NAD", "Myanma Kyat" ],
+      [ "MNT", "Namibian Dollar" ],
+      [ "NGN", "Nepalese Rupee" ],
+      [ "NZD", "Netherlands Antillean Guilder" ],
+      [ "AOA", "New Taiwan Dollar" ],
+      [ "TZS", "New Zealand Dollar" ],
+      [ "OMR", "Nicaraguan Córdoba" ],
+      [ "NOK", "Nigerian Naira" ],
+      [ "NIO", "North Korean Won" ],
+      [ "KRW", "Norwegian Krone" ],
+      [ "NPR", "Omani Rial" ],
+      [ "PAB", "Pakistani Rupee" ],
+      [ "PLN", "Palladium Ounce" ],
+      [ "XPF", "Panamanian Balboa" ],
+      [ "PEN", "Papua New Guinean Kina" ],
+      [ "PHP", "Paraguayan Guarani" ],
+      [ "QAR", "Peruvian Nuevo Sol" ],
+      [ "PGK", "Philippine Peso" ],
+      [ "PKR", "Platinum Ounce" ],
+      [ "YER", "Polish Zloty" ],
+      [ "PYG", "Qatari Rial" ],
+      [ "RON", "Romanian Leu" ],
+      [ "RSD", "Russian Ruble" ],
+      [ "RWF", "Rwandan Franc" ],
+      [ "SAR", "Saint Helena Pound" ],
+      [ "SLL", "Salvadoran Colón" ],
+      [ "SYP", "Samoan Tala" ],
+      [ "XAF", "Saudi Riyal" ],
+      [ "SBD", "Serbian Dinar" ],
+      [ "RUB", "Seychellois Rupee" ],
+      [ "SDG", "Sierra Leonean Leone" ],
+      [ "SOS", "Silver Ounce" ],
+      [ "XAU", "Singapore Dollar" ],
+      [ "SHP", "Solomon Islands Dollar" ],
+      [ "SCR", "Somali Shilling" ],
+      [ "SRD", "South African Rand" ],
+      [ "ZMW", "South Korean Won" ],
+      [ "KWD", "South Sudanese Pound" ],
+      [ "STD", "Special Drawing Rights" ],
+      [ "XOF", "Sri Lankan Rupee" ],
+      [ "LRD", "Sudanese Pound" ],
+      [ "SEK", "Surinamese Dollar" ],
+      [ "SSP", "Swazi Lilangeni" ],
+      [ "THB", "Swedish Krona" ],
+      [ "SGD", "Swiss Franc" ],
+      [ "CLF", "Syrian Pound" ],
+      [ "SZL", "São Tomé and Príncipe Dobra (pre-2018)" ],
+      [ "STN", "São Tomé and Príncipe Dobra" ],
+      [ "SVC", "Tajikistani Somoni" ],
+      [ "TMT", "Tanzanian Shilling" ],
+      [ "UAH", "Thai Baht" ],
+      [ "TJS", "Tongan Pa'anga" ],
+      [ "TRY", "Trinidad and Tobago Dollar" ],
+      [ "TWD", "Tunisian Dinar" ],
+      [ "TOP", "Turkish Lira" ],
+      [ "TTD", "Turkmenistani Manat" ],
+      [ "TND", "Ugandan Shilling" ],
+      [ "USD", "Ukrainian Hryvnia" ],
+      [ "UGX", "United Arab Emirates Dirham" ],
+      [ "AFN", "United States Dollar" ],
+      [ "UYU", "Uruguayan Peso" ],
+      [ "UZS", "Uzbekistan Som" ],
+      [ "VEF", "Vanuatu Vatu" ],
+      [ "WST", "Venezuelan Bolívar Fuerte (Old)" ],
+      [ "VES", "Venezuelan Bolívar Soberano" ],
+      [ "VND", "Vietnamese Dong" ],
+      [ "VUV", "Yemeni Rial" ],
+      [ "ZAR", "Zambian Kwacha" ],
+      [ "ZWL", "Zimbabwean Dollar" ]
+    ]
+  },
+  {
+    "type": "multi-input",
+    "id": "custom-explorer",
+    "title": "Custom Blockchain explorer",
+    "content": "Enter the details of a Blockchain explorer's API.",
+    "help": "https://boxcoin.dev/docs/#explorer",
+    "value": [
+      {
+        "type": "checkbox",
+        "id": "custom-explorer-active",
+        "title": "Active"
+      },
+      {
+        "type": "select",
+        "id": "custom-explorer-divider",
+        "title": "Unit type",
+        "value": [
+          [ "", "Bitcoin | Ethereum | Dogecoin" ],
+          [ 1, "Satoshi | Wei | Dogecoin" ]
+        ]
+      },
+      {
+        "type": "text",
+        "id": "custom-explorer-balance-url",
+        "title": "Balance URL"
+      },
+      {
+        "type": "text",
+        "id": "custom-explorer-balance-path",
+        "title": "Balance path"
+      },
+      {
+        "type": "text",
+        "id": "custom-explorer-transaction-url",
+        "title": "Transaction URL"
+      },
+      {
+        "type": "text",
+        "id": "custom-explorer-transaction-path",
+        "title": "Transaction paths"
+      },
+      {
+        "type": "text",
+        "id": "custom-explorer-transactions-url",
+        "title": "Transactions URL"
+      },
+      {
+        "type": "text",
+        "id": "custom-explorer-transactions-path",
+        "title": "Transactions paths"
+      },
+      {
+        "type": "text",
+        "id": "custom-explorer-address",
+        "title": "Address generator URL"
+      },
+      {
+        "type": "text",
+        "id": "custom-explorer-address-path",
+        "title": "Address generator path"
+      }
+    ]
+  },
+  {
+    "type": "multi-input",
+    "id": "custom-token",
+    "title": "Custom token",
+    "content": "Enter the details of your custom token.",
+    "help": "https://boxcoin.dev/docs/#custom-token",
+    "value": [
+      {
+        "type": "select",
+        "id": "custom-token-type",
+        "title": "Type",
+        "value": [
+          [ "", "Disabled" ],
+          [ "erc-20", "ERC-20" ]
+        ]
+      },
+      {
+        "type": "text",
+        "id": "custom-token-name",
+        "title": "Name"
+      },
+      {
+        "type": "text",
+        "id": "custom-token-code",
+        "title": "Token code"
+      },
+      {
+        "type": "text",
+        "id": "custom-token-address",
+        "title": "Address"
+      },
+      {
+        "type": "text",
+        "id": "custom-token-img",
+        "title": "Icon URL"
+      },
+      {
+        "type": "text",
+        "id": "custom-token-decimals",
+        "title": "Decimals"
+      }
+    ]
+  },
+  {
+    "type": "multi-input",
+    "id": "webhook",
+    "title": "Webhook",
+    "content": "Enter the Webhook details for sending transaction information after a payment is complete.",
+    "help": "https://boxcoin.dev/docs/#webhook",
+    "value": [
+      {
+        "type": "text",
+        "id": "webhook-url",
+        "title": "Webhook URL"
+      },
+      {
+        "type": "text",
+        "id": "webhook-secret",
+        "title": "Webhook secret key"
+      }
+    ]
+  },
+  {
+    "type": "text",
+    "id": "payment-redirect",
+    "title": "Redirect URL",
+    "content": "Redirect the user to a specific URL after a successful payment."
+  },
+  {
+    "type": "multi-input",
+    "id": "custom-explorer",
+    "title": "API keys",
+    "content": "Enter the API keys of the Blockchain explorers.",
+    "value": [
+      {
+        "type": "password",
+        "id": "etherscan-key",
+        "title": "Etherscan"
+      },
+      {
+        "type": "password",
+        "id": "ethplorer-key",
+        "title": "Ethplorer"
+      }
+    ]
+  },
+  {
+    "type": "multi-input",
+    "id": "languages",
+    "title": "Languages",
+    "content": "Set the language of the payment form and administration area.",
+    "help": "https://boxcoin.dev/docs/#languages",
+    "value": [
+      {
+        "type": "select",
+        "id": "language",
+        "title": "Payment form language",
+        "value": [
+          [ "", "Default" ],
+          [ "auto", "Multilingual" ],
+          [ "ar", "Albanian" ],
+          [ "sr", "Arabic" ],
+          [ "bg", "Armenian" ],
+          [ "id", "Bulgarian" ],
+          [ "cs", "Burmese" ],
+          [ "nl", "Chinese" ],
+          [ "hr", "Croatian" ],
+          [ "hu", "Czech" ],
+          [ "da", "Danish" ],
+          [ "en", "Dutch" ],
+          [ "no", "English" ],
+          [ "de", "Estonian" ],
+          [ "fa", "Finnish" ],
+          [ "fr", "French" ],
+          [ "he", "Georgian" ],
+          [ "ko", "German" ],
+          [ "el", "Greek" ],
+          [ "es", "Hebrew" ],
+          [ "hi", "Hindi" ],
+          [ "hr", "Hungarian" ],
+          [ "am", "Indonesian" ],
+          [ "it", "Italian" ],
+          [ "ja", "Japanese" ],
+          [ "ka", "Korean" ],
+          [ "mk", "Macedonian" ],
+          [ "mn", "Mongolian" ],
+          [ "my", "Norwegian" ],
+          [ "pl", "Persian" ],
+          [ "fi", "Polish" ],
+          [ "pt", "Portuguese" ],
+          [ "ro", "Romanian" ],
+          [ "ru", "Russian" ],
+          [ "sk", "Serbian" ],
+          [ "su", "Slovak" ],
+          [ "sl", "Slovenian" ],
+          [ "sq", "Spanish" ],
+          [ "et", "Sundanese" ],
+          [ "sv", "Swedish" ],
+          [ "th", "Thai" ],
+          [ "tr", "Turkish" ],
+          [ "uk", "Ukrainian" ],
+          [ "vi", "Vietnamese" ],
+          [ "zh", "Chinese" ]
+        ]
+      },
+      {
+        "type": "select",
+        "id": "language-admin",
+        "title": "Admin language",
+        "value": [
+          [ "", "Default" ],
+          [ "auto", "Multilingual" ],
+          [ "ar", "Arabic" ],
+          [ "bg", "Bulgarian" ],
+          [ "cs", "Czech" ],
+          [ "da", "Danish" ],
+          [ "en", "English" ],
+          [ "de", "German" ],
+          [ "el", "Greek" ],
+          [ "es", "Spanish" ],
+          [ "et", "Estonian" ],
+          [ "fa", "Persian" ],
+          [ "fi", "Finnish" ],
+          [ "fr", "French" ],
+          [ "he", "Hebrew" ],
+          [ "hi", "Hindi" ],
+          [ "hr", "Croatian" ],
+          [ "hu", "Hungarian" ],
+          [ "am", "Armenian" ],
+          [ "id", "Indonesian" ],
+          [ "it", "Italian" ],
+          [ "ja", "Japanese" ],
+          [ "ka", "Georgian" ],
+          [ "ko", "Korean" ],
+          [ "mk", "Macedonian" ],
+          [ "mn", "Mongolian" ],
+          [ "my", "Burmese" ],
+          [ "nl", "Dutch" ],
+          [ "no", "Norwegian" ],
+          [ "pl", "Polish" ],
+          [ "pt", "Portuguese" ],
+          [ "ro", "Romanian" ],
+          [ "ru", "Russian" ],
+          [ "sk", "Slovak" ],
+          [ "sl", "Slovenian" ],
+          [ "sq", "Albanian" ],
+          [ "sr", "Serbian" ],
+          [ "su", "Sundanese" ],
+          [ "sv", "Swedish" ],
+          [ "th", "Thai" ],
+          [ "tr", "Turkish" ],
+          [ "uk", "Ukrainian" ],
+          [ "vi", "Vietnamese" ],
+          [ "zh", "Chinese" ]
+        ]
+      }
+    ]
+  },
+  {
+    "type": "multi-input",
+    "id": "colors",
+    "title": "Colors",
+    "content": "Change the payment form colors.",
+    "value": [
+      {
+        "type": "color",
+        "id": "color-1",
+        "title": "Color 1"
+      },
+      {
+        "type": "color",
+        "id": "color-2",
+        "title": "Color 2"
+      },
+      {
+        "type": "color",
+        "id": "color-3",
+        "title": "Color 3"
+      }
+    ]
+  },
+  {
+    "type": "select",
+    "id": "layout",
+    "title": "Layout",
+    "content": "Set the payment form layout. Default is inline.",
+    "value": [
+      [ "inline", "Inline" ],
+      [ "popup", "Pop-up" ],
+      [ "link", "Link" ],
+      [ "hidden", "Hidden" ]
+    ]
+  },
+  {
+    "type": "multi-input",
+    "id": "texts",
+    "title": "Payment form texts",
+    "content": "Enter the texts of the payment form.",
+    "value": [
+      {
+        "type": "text",
+        "id": "button-text",
+        "title": "Pop-up button text"
+      },
+      {
+        "type": "text",
+        "id": "form-title",
+        "title": "Form title"
+      },
+      {
+        "type": "textarea",
+        "id": "form-description",
+        "title": "Form description"
+      },
+      {
+        "type": "textarea",
+        "id": "form-payment-description",
+        "title": "Payment form description"
+      },
+      {
+        "type": "text",
+        "id": "success-title",
+        "title": "Successful payment title"
+      },
+      {
+        "type": "textarea",
+        "id": "success-description",
+        "title": "Successful payment description"
+      },
+      {
+        "type": "text",
+        "id": "failed-title",
+        "title": "Failed payment title"
+      },
+      {
+        "type": "textarea",
+        "id": "failed-description",
+        "title": "Failed payment description"
+      },
+      {
+        "type": "textarea",
+        "id": "user-amount-text",
+        "title": "Pay what you want text"
+      }
+    ]
+  },
+  {
+    "type": "multi-input",
+    "id": "update",
+    "title": "Updates",
+    "content": "Boxcoin update settings.",
+    "value": [
+      {
+        "type": "checkbox",
+        "id": "update-auto",
+        "title": "Automatic updates"
+      },
+      {
+        "type": "button",
+        "id": "update-btn",
+        "title": "Update now",
+        "button-text": "Update now",
+        "button-url": "#"
+      }
+    ]
+  },
+  {
+    "type": "text",
+    "id": "envato-purchase-code",
+    "title": "Envato purchase code",
+    "content": "Enter your Envato Purchase Code to enable updates and unlock all features.",
+    "help": "https://help.market.envato.com/hc/en-us/articles/202822600-Where-Is-My-Purchase-Code-"
+  },
+  {
+    "type": "checkbox",
+    "id": "minify",
+    "title": "Minify JS",
+    "content": "Load the minified version of the JS files."
+  }
+]
