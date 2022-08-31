@@ -5,15 +5,21 @@
  * AJAX.PHP
  * ==========================================================
  *
- * AJAX functions. This file must be executed only via AJAX. © 2022 Boxcoin. All rights reserved.
+ * AJAX functions. This file must be executed only via AJAX. ï¿½ 2022 Boxcoin. All rights reserved.
  *
  */
+if (empty($_POST)) {
+    $_POST = json_decode(file_get_contents("php://input"), true);
+} else {
+    if (!isset($_POST['data'])) die();
+    $_POST = json_decode($_POST['data'], true);
+}
+// die(var_dump($_POST));
 
-if (!isset($_POST['data'])) die();
-$_POST = json_decode($_POST['data'], true);
+
 if (!isset($_POST['function'])) die();
 require('functions.php');
-if (bxc_security_error()) die(bxc_json_response('Security error', false));
+// if (bxc_security_error()) die(bxc_json_response('Security error', false));
 
 switch ($_POST['function']) {
     case 'installation':
@@ -54,17 +60,18 @@ switch ($_POST['function']) {
         die(bxc_json_response('No function with name: ' . $_POST['function'], false));
 }
 
-function bxc_json_response($response, $success = true) {
+function bxc_json_response($response, $success = true)
+{
     return json_encode(['success' => $success, 'response' => $response]);
 }
 
-function bxc_post($key, $default = false) {
+function bxc_post($key, $default = false)
+{
     return isset($_POST[$key]) ? ($_POST[$key] == 'false' ? false : ($_POST[$key] == 'true' ? true : $_POST[$key])) : $default;
 }
 
-function bxc_security_error() {
+function bxc_security_error()
+{
     $admin_functions = ['download-transactions', 'get-settings', 'save-settings', 'update', 'get-balances', 'get-transactions', 'get-checkouts', 'save-checkout', 'delete-checkout'];
     return in_array($_POST['function'], $admin_functions) && !bxc_verify_admin();
 }
-
-?>
